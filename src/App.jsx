@@ -7,6 +7,7 @@ import SculptureListPage from "./pages/SculptureListPage.jsx";
 import SculptureDetailPage from "./pages/SculptureDetailPage.jsx";
 import SculptureFormPage from "./pages/SculptureFormPage.jsx";
 import SculptureFilterPage from "./pages/SculptureFilterPage.jsx";
+import SculptureRemovePage from "./pages/SculptureRemovePage.jsx"
 /*import NoPage*/
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
           {/* TODO: "sculptures/:id/edit" → form (Update) */}
           {/* TODO: "*" → NoPage */} 
           <Route path="/sculptures/filter" element={<SculptureFilterPage />}/>
+          <Route path="/sculptures/remove" element={<SculptureRemovePage />}/>
         </Route>
       
       </Routes>

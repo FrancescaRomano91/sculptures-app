@@ -21,6 +21,9 @@ export default function Layout() {
           <li>
             <Link to="/sculptures/filter">Filter</Link>
           </li>
+          <li>
+            <Link to="/sculptures/remove">Remove</Link>
+          </li>
         </ul>
 
       </nav>

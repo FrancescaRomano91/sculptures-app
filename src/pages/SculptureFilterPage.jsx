@@ -10,7 +10,7 @@ export default function SculptureFormPage() {
   const isEdit = Boolean(id);
   const navigate = useNavigate();
 
-  const [sculptures, setSculptures] = useState(sculptureList)
+  //const [sculptures, setSculptures] = useState(sculptureList)
   
   const [year, setYear] = useState("")
     //if (year === "") 
@@ -24,13 +24,9 @@ export default function SculptureFormPage() {
   // TODO: initialise form state from existing sculpture (edit) or blanks (create)
   // Fields: name, artist, year, location, url, alt, description
 
- 
-    
-
   function handleChange(e) {
-    setYear([e.target.name] = e.target.value);
-
-    
+    //setYear([e.target.name] = e.target.value);
+    setYear(e.target.value);
   }
 
   return (
@@ -50,8 +46,10 @@ export default function SculptureFormPage() {
     
 
     <ul>
-        {year}
-    {sculptureList.map((sculptur) => (<li key={sculptur.id}>{sculptur.name + " - " + sculptur.artist + " - " +sculptur.year}</li>))}
+      {year}
+      {year===""?  
+        sculptureList.map((sculptur) => (<li key={sculptur.id}>{sculptur.name + " - " + sculptur.artist + " - " +sculptur.year}</li>)):
+        sculptureList.filter(sculptur => sculptur.year==year).map((sculptur) => (<li key={sculptur.id}>{sculptur.name + " - " + sculptur.artist + " - " +sculptur.year}</li>))}
     </ul>
     </div>
   );
