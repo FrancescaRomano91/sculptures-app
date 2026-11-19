@@ -8,12 +8,12 @@ export default function Layout() {
         <h1> Sculptures Site </h1>
         {/* TODO: NavLink to "/" (List) and "/sculptures/new" (Add) */}
         {/* Hint: NavLink adds an "active" class — style it */}
-        <ul>
+        <ul style={{listStyleType: 'none'}}>
           <li>
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/sculptures/1">Detail</Link>
+            <Link to="/sculptures/0">Detail</Link>
           </li>
           <li>
             <Link to="/sculptures/new">New</Link>
@@ -28,7 +28,7 @@ export default function Layout() {
 
       </nav>
       <main>
-        ************** Layout Main ****************
+        <hr /> 
         {/* TODO: render nested routes + pass shared state via context */}
         <Outlet />
       </main>
