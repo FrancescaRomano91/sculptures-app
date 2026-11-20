@@ -33,7 +33,7 @@ export default function SculptureListPage() {
 
   function handlerOnClickImage(id){
    
-    navigate(`/sculptures/${id-1}`);
+    navigate(`/sculptures/${id}`);
     
     //confirm("id "+ id);
   }
@@ -44,14 +44,16 @@ export default function SculptureListPage() {
     <br />
     <br />
     <h2>Sculptures Gallery</h2>  
+    
     <div>
-      <ul style={{listStyleType: 'none',display: 'flex', gap: '20px',justifyContent: 'center'}}>
+      <ul style={{listStyleType: 'none', gap: '20px', display: 'flex', justifyContent: 'center'}}>
         {sculptureList.map((sculptur) => (
           <li key={sculptur.id}>
             <img src={sculptur.url} alt={sculptur.alt} width={40} style={{display: 'inlineBlock'}} onClick={()=>handlerOnClickImage(sculptur.id)}  />
           </li>))}
       </ul>
     </div>
+
     <button id="previous" onClick={handlerOnClickPrev} disabled={index==0} >Previous</button>
     <button id="next" onClick={handlerOnClickNext}  disabled={index==sculptureList.length -1}>Next</button>
     <p>({index+1} of {sculptureList.length})</p>

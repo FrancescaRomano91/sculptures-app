@@ -28,17 +28,15 @@ export default function SculptureFormPage() {
   return (
     <div> 
       
-      <div>SculptureRemovePage
-      </div>  
+      <h2 style={{ textAlign: "center" }}s>Remove Sculpture</h2>  
       
 
 
-        <table> 
+        <table style={{ margin: "0 auto" }}> 
           <tbody>
           {sculptures.map((sculpt, index) => (
 
             <tr key={index}>
-              <td>{sculpt.id}</td>
               <td>{sculpt.name}</td>
               <td>{sculpt.artist}</td>
               <td>{sculpt.year}</td>

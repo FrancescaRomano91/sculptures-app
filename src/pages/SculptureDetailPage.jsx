@@ -13,19 +13,28 @@ const handleClick = () => {
     navigate('/');
 };
 
+const handleClickEdit = () => {
+    navigate(`/sculptures/${id}/edit`);
+};
+
+const  sculpt = sculptureList.find((scultp) => scultp.id == id);
 
 return(
     <>
-    <br />
-    <br />
-    <br />
+    <h2>Sculpture's Detail</h2>
+    
     <div>
-      <img src= {sculptureList[id].url} width="300" alt={sculptureList[0].alt}/>
-      <h2> Name: {sculptureList[id].name}</h2>
-      <h3> Artist: {sculptureList[id].artist}</h3>
-      <h3> Year: {sculptureList[id].year}</h3>
-      <h4> Description: {sculptureList[id].description}</h4>
+      <img src={sculpt?.url} width="300" alt={sculpt?.alt}/>
+      <h2> Name: {sculpt?.name}</h2>
+      <h3> Artist: {sculpt?.artist}</h3>
+      <h3> Year: {sculpt?.year}</h3>
+      {sculpt?.location && <h3>Location: {sculpt?.location}</h3>}
+      <h4> Description: {sculpt?.description}</h4>
 
+      <button type="button" onClick={handleClickEdit} > 
+        Edit
+      </button>
+          
       <button type="button" onClick={handleClick} > 
         Back to List
       </button>

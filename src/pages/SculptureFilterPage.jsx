@@ -32,12 +32,11 @@ export default function SculptureFormPage() {
   return (
     <div> 
       
-      <div>SculptureFilterPage
-      </div>  
+      <h2>Search Sculpture by Year </h2>  
       
       
        <label>
-        Name:
+        Year:
         <input name="year"
           value={year}  
           onChange={handleChange}       
@@ -45,7 +44,7 @@ export default function SculptureFormPage() {
       </label>
     
 
-    <ul>
+    <ul style={{listStyleType: 'none'}}>
       {year}
       {year===""?  
         sculptureList.map((sculptur) => (<li key={sculptur.id}>{sculptur.name + " - " + sculptur.artist + " - " +sculptur.year}</li>)):

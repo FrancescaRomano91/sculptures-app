@@ -26,6 +26,7 @@ export default function App() {
           {/* TODO: "sculptures/new" → form (Create) */}
           <Route path="/sculptures/new" element={<SculptureFormPage />}/>
           {/* TODO: "sculptures/:id/edit" → form (Update) */}
+          <Route path="/sculptures/:id/edit" element={<SculptureFormPage />}/>
           {/* TODO: "*" → NoPage */} 
           <Route path="/sculptures/filter" element={<SculptureFilterPage />}/>
           <Route path="/sculptures/remove" element={<SculptureRemovePage />}/>
